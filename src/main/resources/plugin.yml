@@ -1,0 +1,19 @@
+name: Essentially
+version: '${project.version}'
+main: dev.maanraj514.essentially.Essentially
+api-version: 1.17
+commands:
+  fly:
+    usage: /<command> <player name>
+  ping:
+    usage: /<command> <player name>
+  tpworld:
+    usage: /<command> <world>
+  bring:
+    usage: /<command> <player name>
+  godmode:
+    usage: /<command>
+  heal:
+    usage: /<command>
+  repair:
+    usage: /<command>
