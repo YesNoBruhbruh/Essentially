@@ -17,14 +17,10 @@ public final class Essentially extends JavaPlugin {
 
     FileConfiguration config = getConfig();
 
-    private PlayerRollBackManager playerRollBackManager;
-
     @Override
     public void onEnable() {
-        config.options().copyDefaults(true);
-        saveConfig();
-
-        playerRollBackManager = new PlayerRollBackManager();
+        config.options().copyDefaults();
+        saveDefaultConfig();
 
         godModePlayers = new ArrayList<>();
 
@@ -56,10 +52,6 @@ public final class Essentially extends JavaPlugin {
         getCommand("heal").setExecutor(new HealCommand());
 
         getCommand("repair").setExecutor(new RepairCommand());
-    }
-
-    public PlayerRollBackManager getPlayerRollBackManager() {
-        return playerRollBackManager;
     }
 
     public List<UUID> getGodModePlayers() {
